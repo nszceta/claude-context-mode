@@ -7,7 +7,26 @@ import { homedir } from "node:os";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 process.chdir(__dirname);
+// Detect runtime environment and set project directory
+// Support both Claude Code and opencode
+if (process.env.CLAUDE_PROJECT_DIR) {
+  // Claude Code environment
+  process.env.PROJECT_DIR = process.env.CLAUDE_PROJECT_DIR;
+} else if (process.env.OPENCODE_PROJECT_DIR) {
+  // opencode environment
+  process.env.PROJECT_DIR = process.env.OPENCODE_PROJECT_DIR;
+} else if (process.env.PROJECT_ROOT) {
+  // Generic project root
+  process.env.PROJECT_DIR = process.env.PROJECT_ROOT;
+} else {
+  // Fallback to current working directory
+  process.env.PROJECT_DIR = process.cwd();
+}
 
+// Normalize to CLAUDE_PROJECT_DIR for internal compatibility (backward compat)
+if (!process.env.CLAUDE_PROJECT_DIR) {
+  process.env.CLAUDE_PROJECT_DIR = process.env.PROJECT_DIR;
+}
 if (!process.env.CLAUDE_PROJECT_DIR) {
   process.env.CLAUDE_PROJECT_DIR = process.cwd();
 }
@@ -72,7 +91,26 @@ if (!existsSync(resolve(__dirname, "node_modules", "better-sqlite3"))) {
     });
   } catch { /* best effort */ }
 }
+// Bundle exists (CI-built) — start instantly
+if (existsSync(resolve(__dirname, "server.bundle.mjs"))) {
+  await import("./server.bundle.mjs");
+} else {
+  // Dev or npm install — full build
+  if (!existsSync(resolve(__dirname, "node_modules"))) {
+    try {
+      execSync("npm install --silent", { cwd: __dirname, stdio: "pipe", timeout: 60000 });
+    } catch { /* best effort */ }
+  }
+  if (!existsSync(resolve(__dirname, "build", "server.js"))) {
+    try {
+      execSync("npx tsc --silent", { cwd: __dirname, stdio: "pipe", timeout: 30000 });
+    } catch { /* best effort */ }
+  }
+  await import("./build/server.js");
+}
 
+console.error(`[context-mode] Project directory: ${process.env.PROJECT_DIR}`);
+console.error(`[context-mode] Running in ${process.env.CLAUDE_CODE ? 'Claude Code' : process.env.OPENCODE ? 'opencode' : 'standalone'} mode`);
 // Bundle exists (CI-built) — start instantly
 if (existsSync(resolve(__dirname, "server.bundle.mjs"))) {
   await import("./server.bundle.mjs");
