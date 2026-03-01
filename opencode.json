@@ -3,11 +3,9 @@
   "mcp": {
     "context-mode": {
       "type": "local",
-      "command": ["npx", "-y", "context-mode"],
+      "command": ["npx", "-y", "github:nszceta/claude-context-mode"],
       "enabled": true,
-      "environment": {
-        "OPENCODE_PROJECT_DIR": "${PWD}"
-      }
+      "timeout": 15000
     }
   }
 }
