@@ -25,6 +25,8 @@
   "homepage": "https://github.com/mksglu/claude-context-mode#readme",
   "bugs": "https://github.com/mksglu/claude-context-mode/issues",
   "bin": {
+    "context-mode": "./start.mjs"
+  },
     "context-mode": "./build/server.js"
   },
   "files": [
