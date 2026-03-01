@@ -27,8 +27,6 @@
   "bin": {
     "context-mode": "./start.mjs"
   },
-    "context-mode": "./build/server.js"
-  },
   "files": [
     "build",
     "hooks",
