@@ -15,12 +15,12 @@ Users install via `npx -y context-mode` — no global install needed.
 
 **Remaining Steps:**
 
-1. **GitHub repo** — Create `mksglu/context-mode` (or your preferred org/name)
+1. **GitHub repo** — Create `nszceta/context-mode` (or your preferred org/name)
    - Push source code
-   - Update `repository` URL in package.json if different from `mksglu/context-mode`
+   - Update `repository` URL in package.json if different from `nszceta/context-mode`
 
 2. **npm account** — Verify npm login: `npm whoami`
-   - If scoped package needed: `@mksglu/context-mode`
+   - If scoped package needed: `@nszceta/context-mode`
 
 3. **First publish:**
    ```bash
@@ -42,7 +42,7 @@ Register on [registry.modelcontextprotocol.io](https://registry.modelcontextprot
 1. Install publisher: `npm install -g mcp-publisher`
 2. Authenticate with GitHub
 3. Register: `mcp-publisher publish`
-4. Server name: `io.github.mksglu/context-mode`
+4. Server name: `io.github.nszceta/context-mode`
 
 ### Tier 3: Claude Code Plugin Marketplace (Optional)
 
@@ -64,7 +64,7 @@ Bundle as a Claude Code plugin with skills/hooks for enhanced experience.
 | .npmignore | Done | Only ships build/, skills/, README, LICENSE |
 | package.json `files` | Done | `["build", "skills", "README.md", "LICENSE"]` |
 | package.json `keywords` | Done | mcp, claude, context-window, sandbox |
-| package.json `repository` | Done | github.com/mksglu/context-mode |
+| package.json `repository` | Done | github.com/nszceta/context-mode |
 | package.json `bin` | Done | Points to `./build/server.js` |
 | `prepublishOnly` script | Done | Runs `npm run build` before publish |
 | Shebang on server.ts | Done | `#!/usr/bin/env node` on line 1 |

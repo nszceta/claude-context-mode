@@ -2,7 +2,7 @@
 
 **The other half of the context problem.**
 
-[![users](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fmksglu%2Fclaude-context-mode%40main%2Fstats.json&query=%24.message&label=users&color=brightgreen)](https://www.npmjs.com/package/context-mode) [![npm](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fmksglu%2Fclaude-context-mode%40main%2Fstats.json&query=%24.npm&label=npm&color=blue)](https://www.npmjs.com/package/context-mode) [![marketplace](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fmksglu%2Fclaude-context-mode%40main%2Fstats.json&query=%24.marketplace&label=marketplace&color=blue)](https://github.com/mksglu/claude-context-mode) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![users](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fnszceta%2Fclaude-context-mode%40main%2Fstats.json&query=%24.message&label=users&color=brightgreen)](https://www.npmjs.com/package/context-mode) [![npm](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fnszceta%2Fclaude-context-mode%40main%2Fstats.json&query=%24.npm&label=npm&color=blue)](https://www.npmjs.com/package/context-mode) [![marketplace](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fnszceta%2Fclaude-context-mode%40main%2Fstats.json&query=%24.marketplace&label=marketplace&color=blue)](https://github.com/nszceta/claude-context-mode) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 Every MCP tool call in Claude Code dumps raw data into your 200K context window. A Playwright snapshot costs 56 KB. Twenty GitHub issues cost 59 KB. One access log — 45 KB. After 30 minutes, 40% of your context is gone.
 
@@ -15,7 +15,7 @@ https://github.com/user-attachments/assets/07013dbf-07c0-4ef1-974a-33ea1207637b
 ## Install
 
 ```bash
-/plugin marketplace add mksglu/claude-context-mode
+/plugin marketplace add nszceta/claude-context-mode
 /plugin install context-mode@claude-context-mode
 ```
 
@@ -57,7 +57,7 @@ Add to your `opencode.json`:
   "mcp": {
     "context-mode": {
       "type": "local",
-      "command": ["npx", "-y", "github:mksglu/claude-context-mode"],
+      "command": ["npx", "-y", "github:nszceta/claude-context-mode"],
       "enabled": true,
       "timeout": 15000
     }
@@ -216,7 +216,7 @@ with code examples. Then run /context-mode:stats.
 ## Development
 
 ```bash
-git clone https://github.com/mksglu/claude-context-mode.git
+git clone https://github.com/nszceta/claude-context-mode.git
 cd claude-context-mode && npm install
 npm test              # run tests
 npm run test:all      # full suite
@@ -224,13 +224,13 @@ npm run test:all      # full suite
 
 ## Contributors
 
-<a href="https://github.com/mksglu/claude-context-mode/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=mksglu/claude-context-mode&columns=8&anon=1" />
+<a href="https://github.com/nszceta/claude-context-mode/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=nszceta/claude-context-mode&columns=8&anon=1" />
 </a>
 
 ### Special Thanks
 
-<a href="https://github.com/mksglu/claude-context-mode/issues/15"><img src="https://github.com/vaban-ru.png" width="32" /></a>
+<a href="https://github.com/nszceta/claude-context-mode/issues/15"><img src="https://github.com/vaban-ru.png" width="32" /></a>
 
 ## License
 

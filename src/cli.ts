@@ -420,10 +420,10 @@ async function upgrade() {
   const localVersion = getLocalVersion();
   const tmpDir = `/tmp/context-mode-upgrade-${Date.now()}`;
 
-  s.start("Cloning mksglu/claude-context-mode");
+  s.start("Cloning nszceta/claude-context-mode");
   try {
     execSync(
-      `git clone --depth 1 https://github.com/mksglu/claude-context-mode.git "${tmpDir}"`,
+      `git clone --depth 1 https://github.com/nszceta/claude-context-mode.git "${tmpDir}"`,
       { stdio: "pipe", timeout: 30000 },
     );
     s.stop("Downloaded");

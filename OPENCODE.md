@@ -23,7 +23,7 @@ Add to your project's `opencode.json`:
   "mcp": {
     "context-mode": {
       "type": "local",
-      "command": ["npx", "-y", "github:mksglu/claude-context-mode"],
+      "command": ["npx", "-y", "github:nszceta/claude-context-mode"],
       "enabled": true,
       "timeout": 15000
     }
@@ -55,7 +55,7 @@ Then configure in `opencode.json`:
   "mcp": {
     "context-mode": {
       "type": "local",
-      "command": ["npx", "-y", "github:mksglu/claude-context-mode"],
+      "command": ["npx", "-y", "github:nszceta/claude-context-mode"],
       "enabled": true,
       "timeout": 15000
     }
@@ -68,7 +68,7 @@ Then configure in `opencode.json`:
 Clone and run from source:
 
 ```bash
-git clone https://github.com/mksglu/claude-context-mode.git
+git clone https://github.com/nszceta/claude-context-mode.git
 cd claude-context-mode
 npm install
 npm run build
@@ -100,7 +100,7 @@ Configure in `opencode.json`:
 ```json
 {
   "type": "local",
-      "command": ["npx", "-y", "github:mksglu/claude-context-mode"]
+      "command": ["npx", "-y", "github:nszceta/claude-context-mode"]
 }
 ```
 
@@ -461,7 +461,7 @@ intent: "issue categories and counts"
   "mcp": {
     "context-mode": {
       "type": "local",
-      "command": ["npx", "-y", "github:mksglu/claude-context-mode"]
+      "command": ["npx", "-y", "github:nszceta/claude-context-mode"]
       "environment": {
         "CUSTOM_API_KEY": "your-key-here",
         "DEBUG": "context-mode:*"
@@ -478,7 +478,7 @@ intent: "issue categories and counts"
   "mcp": {
     "context-mode": {
       "type": "local",
-      "command": ["npx", "-y", "github:mksglu/claude-context-mode"]
+      "command": ["npx", "-y", "github:nszceta/claude-context-mode"]
       "enabled": true
       "timeout": 15000
     "context7": {
@@ -497,7 +497,7 @@ intent: "issue categories and counts"
   "mcp": {
     "context-mode": {
       "type": "local",
-      "command": ["npx", "-y", "github:mksglu/claude-context-mode"]
+      "command": ["npx", "-y", "github:nszceta/claude-context-mode"]
       "enabled": true
       "timeout": 15000
   },
@@ -516,9 +516,9 @@ intent: "issue categories and counts"
 
 ## Support
 
-- **GitHub Issues**: https://github.com/mksglu/claude-context-mode/issues
+- **GitHub Issues**: https://github.com/nszceta/claude-context-mode/issues
 - **npm Package**: https://www.npmjs.com/package/context-mode
-- **Documentation**: https://github.com/mksglu/claude-context-mode#readme
+- **Documentation**: https://github.com/nszceta/claude-context-mode#readme
 
 ## License
 

@@ -90,7 +90,7 @@ When I ask for an X post after a demo prompt, follow these rules:
 - Include concrete metrics from the comparison (KB, tokens, reduction %).
 - No emojis.
 - Technical tone, developer audience.
-- End with the open source repo link: `github.com/mksglu/context-mode`
+- End with the open source repo link: `github.com/nszceta/context-mode`
 - Keep it under 280 characters if possible, but prioritize clarity over brevity.
 
 ### Prompt 5: Parallel Browser + Docs Analysis

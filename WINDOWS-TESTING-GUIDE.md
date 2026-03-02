@@ -17,7 +17,7 @@ Optional runtimes (for full language support):
 ## Step 1 — Clone and build
 
 ```powershell
-git clone https://github.com/mksglu/claude-context-mode.git
+git clone https://github.com/nszceta/claude-context-mode.git
 cd claude-context-mode
 git checkout feat/cross-platform-ci
 npm install
@@ -190,7 +190,7 @@ To remove hooks, delete the `PreToolUse` entry from `~/.claude/settings.json`.
 
 ## Feedback
 
-Report issues on the PR: [feat/cross-platform-ci](https://github.com/mksglu/claude-context-mode/pull/new/feat/cross-platform-ci)
+Report issues on the PR: [feat/cross-platform-ci](https://github.com/nszceta/claude-context-mode/pull/new/feat/cross-platform-ci)
 
 Include:
 - Windows version (`winver`)

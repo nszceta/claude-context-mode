@@ -3,7 +3,7 @@
   "mcp": {
     "context-mode": {
       "type": "local",
-      "command": ["npx", "-y", "github:mksglu/claude-context-mode"],
+      "command": ["npx", "-y", "github:nszceta/claude-context-mode"],
       "enabled": true,
       "timeout": 15000
     }
